@@ -1,0 +1,36 @@
+# Local .terraform directories
+**/.terraform/*
+!.terraform/terraform.tfstate
+!.terraform/terraform.tfstate.backup
+!.terraform/terraform.tfvars
+
+# Terraform variables files
+*.tfvars
+*.tfvars.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Sensitive files
+*.pem
+*.key
+*.crt
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Build artifacts
+*.log
+*.tmp
+
+# Terraform plan output files
+*.tfplan
