@@ -12,12 +12,12 @@ variable "vm_count" {
 }
 
 variable "vm_name" {
-  description = "Name of the Windows 10 VM"
+  description = "Name of the Windows 10 VM. example: windows10-kvm"
   default     = "windows10-kvm"
 }
 
 variable "vm_memory" {
-  description = "Memory allocated to the VM in MB"
+  description = "Memory allocated to the VM in MB. example: 4096. calculated as 4 * 1024"
   default     = "4096"
 }
 
@@ -27,7 +27,7 @@ variable "vm_vcpus" {
 }
 
 variable "disk_size" {
-  description = "Size of the VM's disk in bytes"
+  description = "Size of the VM's disk in bytes. example: 53687091200 (50 GB), calculated as 50 * 1024 * 1024 * 1024"
   default     = 53687091200 # 50 GB
 }
 
@@ -37,7 +37,7 @@ variable "iso_path" {
 }
 
 variable "storage_pool_path" {
-  description = "Path for the libvirt storage pool"
+  description = "Path for the libvirt storage pool. example: /var/lib/libvirt/images" 
   type        = string
 }
 
@@ -47,7 +47,7 @@ variable "network_name" {
 }
 
 variable "network_mode" {
-  description = "Network mode (usually 'nat')"
+  description = "Network mode (usually 'nat') options: nat, bridge, isolated"
   default     = "nat"
 }
 
